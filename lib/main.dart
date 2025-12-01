@@ -19,7 +19,11 @@ class MyApp extends StatelessWidget {
       value: repository,
       child: BlocProvider(
         create: (_) => ItemCubit(repository: repository),
-        child: MaterialApp(title: 'Taksi', home: const HomePage()),
+        child: MaterialApp(
+          title: 'Taksi',
+          debugShowCheckedModeBanner: false,
+          home: const HomePage(),
+        ),
       ),
     );
   }
